@@ -1,0 +1,3 @@
+dotnet build -t:InstallAndroidDependencies -f net8.0-android -p:AndroidSdkDirectory=/workspaces/code2025/.Maui/Android/Sdk -p:AcceptAndroidSdkLicenses=True
+### bisa ditambahkan :
+###-p:JavaSdkDirectory=c:\work\jdk -p:AcceptAndroidSdkLicenses=True
