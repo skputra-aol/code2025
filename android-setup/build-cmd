@@ -1,8 +1,19 @@
 ## install android sdk tools and platform
 
-sdkmanager "platforms;android-25" "build-tools;25.0.2" 
 
-## build apk by android sdk path
+
+mkdir /tmp/dataku
+unzip cmdline-tools.zip -d /tmp/dataku
+cd /tmp/dataku/Android/Sdk/cmdline-tools/latest/bin
+./sdkmanager "platforms;android-33" "build-tools;33.0.2" "tools" "platform-tools" 
+
+#install maui
+sudo dotnet workload install maui-android
+
+#install project maui 
+dotnet new maui -o appku
+
+## install platform 34 dependencies dan atau build apk by android sdk path
 dotnet build -t:InstallAndroidDependencies -f net8.0-android -p:AndroidSdkDirectory=/workspaces/code2025/.Maui/Android/Sdk -p:AcceptAndroidSdkLicenses=True
 ### bisa ditambahkan :
 ###-p:JavaSdkDirectory=c:\work\jdk -p:AcceptAndroidSdkLicenses=True
