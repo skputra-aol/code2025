@@ -18,3 +18,8 @@ dotnet build -t:InstallAndroidDependencies -f net8.0-android -p:AndroidSdkDirect
 ### bisa ditambahkan :
 ###-p:JavaSdkDirectory=c:\work\jdk -p:AcceptAndroidSdkLicenses=True
 
+## build and run
+adb devices
+adb connect 127.0.0.1:5555
+dotnet build -t:Run -f net8.0-android
+
